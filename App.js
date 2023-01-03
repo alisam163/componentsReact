@@ -1,6 +1,5 @@
 import './App.css'
 import ButtonToggle from './components/ButtonToggle'
-import IndexHtml from './components/IndexHtml'
 import ControlButtonSocial from './components/ControlButtonSocial'
 
 import img1 from './images/Instagram.png'
@@ -34,7 +33,6 @@ function App() {
   return (
     <div className="App">
       <ButtonToggle />
-      <IndexHtml />
       <ControlButtonSocial array={array} />
     </div>
   )
