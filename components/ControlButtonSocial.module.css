@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlButtonSocial {
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  background-color: aqua;
+  margin: 0px;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: width 1s;
+}
+
+.controlButtonSocial:hover {
+  width: 100px;
+}
