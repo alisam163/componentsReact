@@ -3,7 +3,7 @@ import styles from './ButtonToggle.module.css'
 
 function ButtonToggle() {
   const [turned, setTurned] = useState(true)
-  console.log(turned)
+
   const handlerToggleClick = (event) => {
     event.preventDefault()
     setTurned(!turned)

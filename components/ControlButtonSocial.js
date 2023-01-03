@@ -4,9 +4,7 @@ import { useState } from 'react'
 
 function ControlButtonSocial(props) {
   const { array } = props
-
   const arrayLength = array.length
-  console.log(arrayLength)
   const [show, setShow] = useState(false)
 
   const divStyle = {
@@ -16,7 +14,7 @@ function ControlButtonSocial(props) {
     margin: '0px',
     overflow: 'hidden',
     borderRadius: '20px',
-    transition: 'width 1s',
+    transition: 'width 0.5s',
     alignSelf: 'center',
   }
 
@@ -27,9 +25,8 @@ function ControlButtonSocial(props) {
     margin: '0px',
     overflow: 'hidden',
     borderRadius: '20px',
-    transition: 'width 1s',
+    transition: 'width 0.5s',
   }
-  console.log(divStyle)
 
   const handlerMouseEnter = (event) => {
     event.preventDefault()
@@ -49,9 +46,15 @@ function ControlButtonSocial(props) {
         onMouseLeave={handlerMouseOver}
       >
         {show ? (
-          array.map((elem, index) => <ButtonSocial key={index} srcImg={elem} />)
+          array.map((elem, index) => (
+            <ButtonSocial
+              key={index}
+              srcImg={elem.srcImg}
+              urlSocial={elem.urlSocial}
+            />
+          ))
         ) : (
-          <ButtonSocial srcImg={array[0]} />
+          <ButtonSocial srcImg={array[0].srcImg} />
         )}
       </div>
     </div>
